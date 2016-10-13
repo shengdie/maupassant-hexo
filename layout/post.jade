@@ -28,16 +28,19 @@ block content
           != toc(page.content)
     .post-content
       != page.content
+    if theme.cclicense == true
+      hr(align='left', style='margin-top:2.5em;margin-bottom:0.3em;border:1px dashed;border-style:none none dashed;position:relative;width:60%;color:#D8D8D8;')
+      a.nofancybox(rel='license', href='http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh')
+        img(alt='知识共享许可协议', style='border-width:0', src='/cc-by-nc-sa.svg', width='65')
+      font(siez='1')
+        i
+          | 本作品采用
+          a(rel='license', href='http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh') 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议
+          | 进行许可。
+      hr(style='margin:1.2em auto;visibility:hidden;')
     if theme.shareto == true
       script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
       a.article-share-link(data-url='#{page.permalink}', data-id='#{page._id}')= __('shareto')
-    if theme.cclicense == true
-      a.nofancybox(rel='license', href='http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh')
-        img(alt='知识共享许可协议', style='border-width:0', src='https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png')
-      br
-      | 本作品采用
-      a(rel='license', href='http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh') 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议
-      | 进行许可。
     include _partial/tag
     include _partial/post_nav
     if theme.duoshuo
