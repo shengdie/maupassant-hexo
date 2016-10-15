@@ -38,6 +38,16 @@ block content
           a(target='_blank',rel='license', href='http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh') 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议
           | 进行许可。
       hr(style='margin:1.2em auto;visibility:hidden;')
+    if theme.donate == true
+      link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/donate.css')
+      script(type='text/javascript', src=url_for(theme.js) + '/donate.js', async)
+      #DonateText.tr3
+      ul#donateBox.list.pos-re.tr3
+        li#AliPay AliPay
+        li#WeChat WeChat
+      #QRBox.pos-re.left-100(style='display: none;')
+        #MainBox(style='background-image: url("images/WeChanQR.png");')
+      hr(style='margin:1.2em auto;visibility:hidden;')
     if theme.shareto == true
       script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
       a.article-share-link(data-url='#{page.permalink}', data-id='#{page._id}')= __('shareto')
