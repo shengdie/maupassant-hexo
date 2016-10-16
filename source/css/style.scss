@@ -225,6 +225,13 @@ div {
               padding-right: 0.3em;
             }
         }
+        .leancloud_visitors {
+            &:before {
+              font-family: "FontAwesome";
+              content: "\f024";
+              padding-right: 0.3em;
+            }
+        }
     }
     .ds-thread-count {
         padding: 0;
