@@ -75,7 +75,7 @@ if page.mathjax
 if page.mathjax2
   include mathjax2
 
-if (theme.leancloud_visitors.enable && !page.archive && !page.category && !page.tag)
+if (theme.leancloud_visitors.enable && !page.archive && !page.category && !page.tag && page.type != "guestbook")
   script(type='text/javascript', src='https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js')
   script(type='text/javascript').
     AV.initialize("#{theme.leancloud_visitors.app_id}", "#{theme.leancloud_visitors.app_key}");
