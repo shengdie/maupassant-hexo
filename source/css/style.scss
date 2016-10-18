@@ -407,13 +407,24 @@ div {
 }
 
 #footer {
-    padding: .8em 0 3.6em;
-    margin-top: 1em;
-    line-height: 2.5;
+    position: relative;
+    padding-top: 60px;
     color: #6E7173;
+    left: 0;
+    bottom: 0;
+    min-height: 100px;
+    width: 100%;
     text-align: center;
     span {
         font-size: .9em;
+    }
+    .author {
+        &:before {
+            font-family: "FontAwesome";
+            content: "\f004";
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            }
     }
 }
 

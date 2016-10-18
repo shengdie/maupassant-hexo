@@ -1,7 +1,8 @@
-#footer= '© '
-  a(href=url_for('.'), rel='nofollow')= config.author + '.'
-  |  Powered by
-  a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
-  a(rel='nofollow', target='_blank', href='https://github.com/tufu9441/maupassant-hexo')  Theme
-  |  by
-  a(rel='nofollow', target='_blank', href='https://github.com/pagecho')  Cho.
+#footer
+  - var current = (new Date()).getFullYear()
+  | © 
+  if(theme.since && theme.since != current) 
+    theme.since -
+  span(itemprop='copyrightYear')= current
+  span.author(itemprop='copyrightHolder')= config.author
+
