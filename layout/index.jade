@@ -15,6 +15,11 @@ block content
         a(href=url_for(post.path))
           +title(post)
       .post-meta= post.date.format(config.date_format)
+        if theme.leancloud_visitors.enable == true
+          span= ' | '
+          span.leancloud_visitors(id=url_for(post.path), data-flag-title=post.title)
+            span.leancloud-visitors-count
+          span= ' ' + __('Hits')
       if theme.duoshuo
         a.ds-thread-count(data-thread-key=post.path, href=url_for(post.path) + '#comments')
       if theme.disqus

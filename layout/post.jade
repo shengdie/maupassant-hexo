@@ -20,6 +20,7 @@ block content
       if theme.leancloud_visitors.enable == true
         span= ' | '
         span.leancloud_visitors(id=url_for(page.path), data-flag-title=page.title)
+          span.leancloud-visitors-count
         span= ' ' + __('Hits')
     if theme.duoshuo
       a.ds-thread-count(data-thread-key=page.path, href=url_for(page.path) + '#comments')
@@ -34,8 +35,8 @@ block content
       != page.content
     if theme.cclicense == true
       hr(align='left', style='margin-top:2.5em;margin-bottom:0.3em;border:1px dashed;border-style:none none dashed;position:relative;width:60%;color:#D8D8D8;')
-      a.nofancybox(target='_blank',rel='license', href='http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh')
-        img(alt='知识共享许可协议', style='border-width:0', src='/cc-by-nc-sa.svg', width='65')
+      a(target='_blank',rel='license', href='http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh')
+        img.nofancybox(alt='知识共享许可协议', style='border-width:0', src='/cc-by-nc-sa.svg', width='65')
       font(siez='1')
         i
           | 本作品采用
@@ -50,7 +51,7 @@ block content
         li#AliPay AliPay
         li#WeChat WeChat
       #QRBox.pos-re.left-100(style='display: none;')
-        #MainBox(style='background-image: url("images/WeChanQR.png");')
+        #MainBox(style='background-image: url("/images/WeChatQR.png");')
       hr(style='margin:1.2em auto;visibility:hidden;')
     if theme.shareto == true
       script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)

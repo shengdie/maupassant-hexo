@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
 	var QRBox	=	$('#QRBox');
 	var MainBox	=	$('#MainBox');
 	var AliPayQR	=	'/images/AliPayQR.png';
-	var WeChanQR	=	'/images/WeChatQR.png';
+	var WeChatQR	=	'/images/WeChatQR.png';
 
 	
 
@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
 		if (thisID === 'AliPay') {
 			showQR(AliPayQR);
 		} else if (thisID === 'WeChat') {
-			showQR(WeChanQR);
+			showQR(WeChatQR);
 		}
 	});
 
