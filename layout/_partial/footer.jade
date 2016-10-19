@@ -4,5 +4,6 @@
   if(theme.since && theme.since != current) 
     theme.since -
   span(itemprop='copyrightYear')= current
-  span.author(itemprop='copyrightHolder')= config.author
+  span.author(itemprop='copyrightHolder')
+    img.nofancybox(src='/images/srlq.svg', width='70px', style='position: relative;top:5px;')
 
