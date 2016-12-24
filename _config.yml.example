@@ -12,7 +12,13 @@ show_category_count: false ## If you want to show the count of categories in the
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
-cclicense : true ## Set to ture to add creative commons license
+cclicense: ## Set to ture to add creative commons license
+donate: true
+
+leancloud_visitors:
+  enable:
+  app_id:
+  app_key: 
 
 menu:
   - page: home
@@ -21,9 +27,9 @@ menu:
   - page: archive
     directory: archives/
     icon: fa-archive
-  - page: about
-    directory: about/
-    icon: fa-user
+  - page: guestbook
+    directory: guestbook/
+    icon: fa-comments
   - page: rss
     directory: atom.xml
     icon: fa-rss
